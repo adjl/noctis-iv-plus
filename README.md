@@ -22,6 +22,6 @@ Now, a decade later, here I am.
 Credit belongs to Alex, Megagun, Neuzd, Shadowlord, Bensel, The Reflection, Ees33, MopedSlug, Stargazer, Ireclan, Ryan J. Bury, Mvgulik and others at the [Webterritory of Fottifoh](http://anynowhere.com).
 
 ## License
-[WTOF Public License](WPL.HTM)
+[WTOF Public License](wpl.htm)
 
 See also [General conditions for distribution of modified versions of Noctis IV's source code](http://anynowhere.com/bb/posts.php?t=409&p=5)
