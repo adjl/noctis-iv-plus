@@ -1,14 +1,14 @@
 .AUTODEPEND
 
-.PATH.obj = .\BIN
+.PATH.obj = C:\BIN
 
 #		*Translator Definitions*
 CC = bcc +NOCTIS.CFG
-TASM = tasm
+TASM = TASM
 TLIB = tlib
 TLINK = tlink
-LIBPATH = C:\BC.31\LIB
-INCLUDEPATH = C:\BC.31\INCLUDE
+LIBPATH = C:\BORLANDC\LIB
+INCLUDEPATH = C:\BORLANDC\INCLUDE
 
 
 #		*Implicit Rules*
@@ -22,18 +22,18 @@ INCLUDEPATH = C:\BC.31\INCLUDE
 
 
 EXE_dependencies =  \
- noctis-0.obj \
- noctis-1.obj \
- noctis.obj
+ c:\bin\noctis-0.obj \
+ c:\bin\noctis-1.obj \
+ c:\bin\noctis.obj
 
 #		*Explicit Rules*
-turbo assembler: noctis.cfg $(EXE_dependencies)
+c:\bin\noctis.exe: noctis.cfg $(EXE_dependencies)
   $(TLINK) /x/i/n/c/P-/A=16/L$(LIBPATH) @&&|
 c0l.obj+
-.\bin\noctis-0.obj+
-.\bin\noctis-1.obj+
-.\bin\noctis.obj
-.\bin\noctis
+c:\bin\noctis-0.obj+
+c:\bin\noctis-1.obj+
+c:\bin\noctis.obj
+c:\bin\noctis
 		# no map file
 fp87.lib+
 mathl.lib+
@@ -42,11 +42,11 @@ cl.lib
 
 
 #		*Individual File Dependencies*
-noctis-0.obj: noctis.cfg noctis-0.cpp 
+c:\bin\noctis-0.obj: noctis.cfg noctis-0.cpp 
 
-noctis-1.obj: noctis.cfg noctis-1.cpp 
+c:\bin\noctis-1.obj: noctis.cfg noctis-1.cpp 
 
-noctis.obj: noctis.cfg noctis.cpp 
+c:\bin\noctis.obj: noctis.cfg noctis.cpp 
 
 #		*Compiler Configuration File*
 noctis.cfg: noctis.mak
@@ -61,11 +61,12 @@ noctis.cfg: noctis.mak
 -k-
 -h
 -vi-
+-H=NOCTIS.SYM
 -wamp
 -wuse
 -weas
 -wpre
--n.\BIN
+-nC:\BIN
 -I$(INCLUDEPATH)
 -L$(LIBPATH)
 | noctis.cfg
