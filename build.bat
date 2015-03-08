@@ -12,6 +12,6 @@ goto make
 
 :link
 move /y \bin\noctis.exe \noctis\modules
-copy /y supports.nct \noctis\data
+copy /y data\supports.nct \noctis\data
 
 cd /
